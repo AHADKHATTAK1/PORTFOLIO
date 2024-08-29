@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUHAMMHAD AHAD KHAN KHATTAK | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Add some inline CSS for demonstration */
+        .btn {
+            background-color: #04fffb; /* Bright color for buttons */
+            color: #111;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #03d8c8;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .home-content h1 {
+            font-size: 3rem;
+            color: #04fffb;
+        }
+
+        .home-content p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #ccc;
+        }
+
+        .social-icons a {
+            color: #04fffb;
+            font-size: 2rem;
+            margin: 0 0.5rem;
+        }
+
+        .project-box {
+            background-color: #111;
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact .input-box input, .contact textarea {
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <!-- <a href="#home" class="logo"><span></span></a> -->
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Muhammad Ahad Khan Khattak</span></h1>
+            <p>Passionate web developer and AI enthusiast. Diving deep into Generative AI and building cutting-edge projects. Let's collaborate and build something extraordinary!</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/muhammad-ahad-khan-khattak-358361247" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+              <a href="https://github.com/AHADKHATTAK1" target="_blank"><i class='bx bxl-github'></i></a>
+              <!-- <P><a href="#contact" class="btn">Get In Touch</a></> -->
+            </div>
+        <!-- </div>
+        <div class="">
+            <img src="assets/my pic.jpeg" alt="Muhammad Ahad Khan Khattak">
+        </div> -->
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="my pic.jpeg" alt="About Image">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>Hello! I’m Muhammad Ahad Khan Khattak, a seasoned Shopify expert and entrepreneur with a passion for web design and artificial intelligence. My journey started with transforming e-commerce experiences through Shopify, and now I’m diving into the world of HTML web design and AI. I’m blending my entrepreneurial spirit with cutting-edge technology to create innovative solutions and stunning digital experiences.</p>
+            <p>Currently, I’m exploring the limitless possibilities of artificial intelligence, learning to harness its power to drive technological advancement. Whether it’s building elegant websites or developing AI-driven applications, I’m dedicated to pushing the boundaries of what’s possible and delivering excellence in every project.</p>
+             <a href="#" class="btn">Discover More</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <div class="projects-container">
+            <!-- Project box example -->
+            <div class="project-box">
+                <h4>SOME CREATIVE PROJECTS</h4>
+                <p>TAP TO CATCH MY PROJECTS</p>
+                <a href="https://github.com/AHADKHATTAK1" class="btn-visit">View on GitHub</a>
+            </div>
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+                <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="ec3177b1-3a6c-4d7e-9b32-5d4ea37aeab4">
+
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/your-github" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+        <p>&copy; 2024 Muhammad Ahad Khan Khattak | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
