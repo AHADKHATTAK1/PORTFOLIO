@@ -371,10 +371,88 @@ body {
     font-size: 1.6rem;
 }
 
+/* Services Section */
+.services {
+    padding: 8rem 7%;
+    background: var(--second-bg-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-box {
+    background: rgba(11, 13, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.8rem;
+    padding: 3rem 2.5rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--main-color);
+    box-shadow: 0 0 30px var(--glow-color);
+    background: var(--card-hover-bg);
+}
+
+.service-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background: rgba(4, 255, 251, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 1.5rem;
+    font-size: 3.2rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.service-box:hover .service-icon {
+    background: var(--main-color);
+    color: #000;
+    box-shadow: 0 0 20px var(--main-color);
+    transform: scale(1.1);
+}
+
+.service-box h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.service-tag {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.4rem 1.2rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
 /* Projects Section */
 .projects {
     padding: 8rem 7%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .projects-container {

@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dynamic Typing Effect
     const typingSpan = document.querySelector('.text-animation span');
     if (typingSpan) {
-        const words = ['Shopify E-Commerce Stores', 'AI-Powered Applications', 'Cutting-Edge Web Solutions', 'Custom Full-Stack Apps'];
+        const words = ['Shopify & WordPress Stores', 'SEO & Search Engine Ranking', 'SMM & Meta Ad Marketing', 'Amazon & eBay Store Management', 'AI-Powered Web Applications'];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
