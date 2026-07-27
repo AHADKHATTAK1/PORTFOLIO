@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            if (pageYOffset >= sectionTop) {
+            const sectionTop = section.offsetTop - 180;
+            if (window.pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
@@ -55,9 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Dynamic Typing Effect
-    const typingSpan = document.querySelector('.text-animation span');
+    const typingSpan = document.querySelector('.typing-text');
     if (typingSpan) {
-        const words = ['Shopify & WordPress Stores', 'SEO & Search Engine Ranking', 'SMM & Meta Ad Marketing', 'Amazon & eBay Store Management', 'AI-Powered Web Applications'];
+        const words = [
+            'Shopify E-Commerce Stores',
+            'WordPress & WooCommerce',
+            'SEO & Google Page 1 Rankings',
+            'SMM & Meta Ad Funnels',
+            'Amazon & eBay Storefronts',
+            'AI Web Applications'
+        ];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -72,15 +79,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 charIndex++;
             }
 
-            let typeSpeed = isDeleting ? 40 : 80;
+            let typeSpeed = isDeleting ? 40 : 70;
 
             if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000; // Pause at end
+                typeSpeed = 2200; // Pause at end
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 500;
+                typeSpeed = 400;
             }
 
             setTimeout(typeEffect, typeSpeed);
@@ -89,6 +96,30 @@ document.addEventListener("DOMContentLoaded", () => {
         typeEffect();
     }
 
+    // Interactive Project Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
     // Scroll to Top Button
     const scrollToTopBtn = document.createElement('button');
     scrollToTopBtn.innerHTML = '<i class="bx bx-up-arrow-alt"></i>';
@@ -96,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(scrollToTopBtn);
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 350) {
             scrollToTopBtn.style.display = 'block';
         } else {
             scrollToTopBtn.style.display = 'none';
