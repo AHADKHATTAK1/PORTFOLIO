@@ -1,37 +1,97 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth Scroll for Navigation Links
-    document.querySelectorAll('.navbar a, .footer a').forEach(anchor => {
+    document.querySelectorAll('.navbar a[href^="#"], .footer a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId.startsWith('#')) {
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile nav menu
+                    const navbar = document.querySelector('.navbar');
+                    const menuIcon = document.getElementById('menu-icon');
+                    if (navbar && navbar.classList.contains('active')) {
+                        navbar.classList.remove('active');
+                        menuIcon.classList.remove('bx-x');
+                    }
+                }
+            }
         });
     });
 
-    // Change Text Color on Hover
-    const textElements = document.querySelectorAll('.home-content h1, .about-content h2 span, .projects-info h4');
-    textElements.forEach(el => {
-        el.addEventListener('mouseover', () => {
-            el.style.color = '#04fffb'; // Change color on hover
-        });
-        el.addEventListener('mouseout', () => {
-            el.style.color = ''; // Reset color
-        });
-    });
-
-    // Menu Toggle for Mobile View
+    // Mobile Menu Toggle
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
-    menuIcon.addEventListener('click', () => {
-        navbar.classList.toggle('active');
-        menuIcon.classList.toggle('bx-x'); // Change icon to close
+    if (menuIcon && navbar) {
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuIcon.classList.toggle('bx-x');
+        });
+    }
+
+    // Scroll Active Section Highlight
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === `#${current}`) {
+                a.classList.add('active');
+            }
+        });
     });
 
-    // Show a "Scroll to Top" Button
+    // Dynamic Typing Effect
+    const typingSpan = document.querySelector('.text-animation span');
+    if (typingSpan) {
+        const words = ['Shopify E-Commerce Stores', 'AI-Powered Applications', 'Cutting-Edge Web Solutions', 'Custom Full-Stack Apps'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingSpan.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingSpan.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // Pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        typeEffect();
+    }
+
+    // Scroll to Top Button
     const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '<i class="bx bx-arrow-to-top"></i>';
+    scrollToTopBtn.innerHTML = '<i class="bx bx-up-arrow-alt"></i>';
     scrollToTopBtn.className = 'scroll-to-top';
     document.body.appendChild(scrollToTopBtn);
 

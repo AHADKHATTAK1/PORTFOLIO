@@ -3,263 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUHAMMHAD AHAD KHAN KHATTAK | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Muhammad Ahad Khan Khattak - Shopify Expert, Web Developer & AI Enthusiast Portfolio">
+    <title>MUHAMMAD AHAD KHAN KHATTAK | Portfolio & AI Solutions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        /* Add some inline CSS for demonstration */
-        .btn {
-            background-color: #04fffb; /* Bright color for buttons */
-            color: #111;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        .btn:hover {
-            background-color: #03d8c8;
-        }
-
-        .heading {
-            font-size: 2.5rem;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .home-content h1 {
-            font-size: 3rem;
-            color: #04fffb;
-        }
-
-        .home-content p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-            color: #ccc;
-        }
-
-        .social-icons a {
-            color: #04fffb;
-            font-size: 2rem;
-            margin: 0 0.5rem;
-        }
-
-        .project-box {
-            background-color: #111;
-            color: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        .contact form {
-            display: grid;
-            gap: 1rem;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .contact .input-box input, .contact textarea {
-            padding: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .contact textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header / Navbar -->
     <header class="header">
-        <!-- <a href="#home" class="logo"><span></span></a> -->
+        <a href="#home" class="logo">AHAD<span>KHATTAK</span></a>
         <i class="bx bx-menu" id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
+            <a href="#stats">Metrics</a>
             <a href="#projects">Projects</a>
+            <a href="#testimonials">Client Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Home / Hero Section -->
     <section class="home" id="home">
         <div class="home-content">
+            <div class="hero-badge"><i class='bx bx-code-alt'></i> Shopify Expert & AI Developer</div>
             <h1>Hi, I'm <span>Muhammad Ahad Khan Khattak</span></h1>
-            <p>Passionate web developer and AI enthusiast. Diving deep into Generative AI and building cutting-edge projects. Let's collaborate and build something extraordinary!</p>
-            <a href="#contact" class="btn">Get In Touch</a>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/muhammad-ahad-khan-khattak-358361247" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-              <a href="https://github.com/AHADKHATTAK1" target="_blank"><i class='bx bxl-github'></i></a>
-              <!-- <P><a href="#contact" class="btn">Get In Touch</a></> -->
+            <h3 class="text-animation">I build <span></span></h3>
+            <p>Passionate web developer, Shopify expert, and AI enthusiast. Blending entrepreneurial vision with cutting-edge artificial intelligence and web design to build extraordinary digital experiences.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary"><i class='bx bx-folder-open'></i> Explore Projects</a>
+                <a href="#contact" class="btn btn-secondary"><i class='bx bx-envelope'></i> Get In Touch</a>
             </div>
-        <!-- </div>
-        <div class="">
-            <img src="assets/my pic.jpeg" alt="Muhammad Ahad Khan Khattak">
-        </div> -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/muhammad-ahad-khan-khattak-358361247" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://github.com/AHADKHATTAK1" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-glowing-wrapper">
+                <img src="my pic.jpeg" alt="Muhammad Ahad Khan Khattak">
+            </div>
+        </div>
     </section>
 
+    <!-- Quick Stats / Metrics Section -->
+    <section class="stats" id="stats">
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class='bx bx-calendar-star'></i>
+                <h3 class="counter">2023 - 2026</h3>
+                <p>Years of Active Innovation</p>
+            </div>
+            <div class="stat-box">
+                <i class='bx bx-briefcase-alt-2'></i>
+                <h3 class="counter">50+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box">
+                <i class='bx bx-group'></i>
+                <h3 class="counter">30+</h3>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="stat-box">
+                <i class='bx bx-check-shield'></i>
+                <h3 class="counter">100%</h3>
+                <p>Quality & Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="my pic.jpeg" alt="About Image">
+            <img src="my pic.jpeg" alt="Muhammad Ahad Khan Khattak">
         </div>
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
-            <p>Hello! I’m Muhammad Ahad Khan Khattak, a seasoned Shopify expert and entrepreneur with a passion for web design and artificial intelligence. My journey started with transforming e-commerce experiences through Shopify, and now I’m diving into the world of HTML web design and AI. I’m blending my entrepreneurial spirit with cutting-edge technology to create innovative solutions and stunning digital experiences.</p>
+            <p class="about-intro">Hello! I’m <strong>Muhammad Ahad Khan Khattak</strong>, a seasoned Shopify expert and entrepreneur with a passion for web design and artificial intelligence. My journey started with transforming e-commerce experiences through Shopify, and now I’m diving into the world of HTML web design and AI. I’m blending my entrepreneurial spirit with cutting-edge technology to create innovative solutions and stunning digital experiences.</p>
             <p>Currently, I’m exploring the limitless possibilities of artificial intelligence, learning to harness its power to drive technological advancement. Whether it’s building elegant websites or developing AI-driven applications, I’m dedicated to pushing the boundaries of what’s possible and delivering excellence in every project.</p>
-             <a href="#" class="btn">Discover More</a>
+            
+            <!-- Skill Badges -->
+            <div class="skills-grid">
+                <span class="skill-tag"><i class='bx bxl-shopify'></i> Shopify Development</span>
+                <span class="skill-tag"><i class='bx bx-bot'></i> AI & LLM Applications</span>
+                <span class="skill-tag"><i class='bx bxl-html5'></i> Web Design (HTML5/CSS3)</span>
+                <span class="skill-tag"><i class='bx bxl-javascript'></i> JavaScript & TypeScript</span>
+                <span class="skill-tag"><i class='bx bxl-python'></i> Python & AI Bots</span>
+                <span class="skill-tag"><i class='bx bx-cube-alt'></i> Rust & Blockchain</span>
+            </div>
+
+            <a href="https://github.com/AHADKHATTAK1" target="_blank" class="btn btn-primary margin-top"><i class='bx bxl-github'></i> View GitHub Profile</a>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section class="projects" id="projects">
         <h2 class="heading">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">Real-world customer applications, e-commerce stores, and AI implementations built since 2023</p>
+        
         <div class="projects-container">
+            <!-- ETP Portal -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-star'></i> Featured</div>
                 <div class="project-info">
                     <h4>ETP Portal</h4>
-                    <span class="project-tech">Web Application / Vercel</span>
-                    <p>Enterprise and Educational Training Platform portal solution.</p>
+                    <span class="project-tech">Web App / Vercel</span>
+                    <p>Enterprise and Educational Training Platform portal designed for interactive learning and user management.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://etp-xi.vercel.app" target="_blank" class="btn-visit"><i class='bx bx-link-external'></i> Live Demo</a>
-                    <a href="https://github.com/AHADKHATTAK1/etp" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> GitHub Repo</a>
+                    <a href="https://github.com/AHADKHATTAK1/etp" target="_blank" class="btn-visit secondary"><i class='bx bxl-github'></i> Code</a>
                 </div>
             </div>
+
+            <!-- Fitness & Gym Management -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-star'></i> Customer Project</div>
                 <div class="project-info">
                     <h4>Fitness & Gym Management</h4>
-                    <span class="project-tech">Full-Stack / Offline App / Vercel</span>
-                    <p>Comprehensive Fitness & Gym Records System (Offline & Online Management).</p>
+                    <span class="project-tech">Full-Stack / Offline Support / Vercel</span>
+                    <p>Comprehensive fitness management solution for gym owners, member records, and offline synchronization.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://gym-offline.vercel.app" target="_blank" class="btn-visit"><i class='bx bx-link-external'></i> Live Demo</a>
-                    <a href="https://github.com/AHADKHATTAK1/gym-offline" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> GitHub Repo</a>
+                    <a href="https://github.com/AHADKHATTAK1/gym-offline" target="_blank" class="btn-visit secondary"><i class='bx bxl-github'></i> Code</a>
                 </div>
             </div>
+
+            <!-- Masjid Website (Haji Barkat) -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-heart'></i> Community</div>
                 <div class="project-info">
                     <h4>Masjid Website (Haji Barkat)</h4>
-                    <span class="project-tech">HTML / CSS / JavaScript</span>
-                    <p>Official website for Community Masjid and Haji Barkat welfare portal.</p>
+                    <span class="project-tech">HTML5 / CSS3 / JavaScript</span>
+                    <p>Official community portal for Masjid & Haji Barkat welfare initiatives, prayer timings, and announcements.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/AHADKHATTAK1/masjid-website" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
                 </div>
             </div>
+
+            <!-- Javed Goods Logistics -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-truck'></i> Logistics</div>
                 <div class="project-info">
                     <h4>Javed Goods Logistics</h4>
                     <span class="project-tech">Web App / Vercel</span>
-                    <p>Logistics, goods transport, and fleet management tracking portal.</p>
+                    <p>Transport logistics and fleet tracking web portal built for seamless goods movement management.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://javed-goods.vercel.app" target="_blank" class="btn-visit"><i class='bx bx-link-external'></i> Live Demo</a>
-                    <a href="https://github.com/AHADKHATTAK1/javed-goods" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> GitHub Repo</a>
+                    <a href="https://github.com/AHADKHATTAK1/javed-goods" target="_blank" class="btn-visit secondary"><i class='bx bxl-github'></i> Code</a>
                 </div>
             </div>
+
+            <!-- POS System -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-store-alt'></i> Commercial</div>
                 <div class="project-info">
                     <h4>POS System (Point of Sale)</h4>
-                    <span class="project-tech">Web App / Vercel</span>
-                    <p>Modern Point of Sale application for inventory, sales, and invoicing.</p>
+                    <span class="project-tech">Web Application / Vercel</span>
+                    <p>Retail Point of Sale software for real-time inventory management, sales reports, and billing.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://pos2-mu.vercel.app" target="_blank" class="btn-visit"><i class='bx bx-link-external'></i> Live Demo</a>
-                    <a href="https://github.com/AHADKHATTAK1/pos2" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> GitHub Repo</a>
+                    <a href="https://github.com/AHADKHATTAK1/pos2" target="_blank" class="btn-visit secondary"><i class='bx bxl-github'></i> Code</a>
                 </div>
             </div>
+
+            <!-- CardInfo Web App -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-credit-card'></i> Web App</div>
                 <div class="project-info">
                     <h4>CardInfo Web App</h4>
                     <span class="project-tech">JavaScript / HTML / Vercel</span>
-                    <p>Web application providing card details and information interface.</p>
+                    <p>Modern card detail verification and interactive financial information interface.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://cardinfo-phi.vercel.app" target="_blank" class="btn-visit"><i class='bx bx-link-external'></i> Live Demo</a>
-                    <a href="https://github.com/AHADKHATTAK1/cardinfo" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> GitHub Repo</a>
+                    <a href="https://github.com/AHADKHATTAK1/cardinfo" target="_blank" class="btn-visit secondary"><i class='bx bxl-github'></i> Code</a>
                 </div>
             </div>
+
+            <!-- Trading AI Bot -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-bot'></i> AI Project</div>
                 <div class="project-info">
                     <h4>Trading AI Bot</h4>
-                    <span class="project-tech">Python / Algorithmic Trading</span>
-                    <p>Automated trading AI bot for market analysis and trading strategies.</p>
+                    <span class="project-tech">Python / Algorithmic AI</span>
+                    <p>Automated market analysis trading bot incorporating predictive AI models and real-time execution.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/AHADKHATTAK1/trading-ai-bot" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
                 </div>
             </div>
+
+            <!-- Fleet Management -->
             <div class="project-box">
+                <div class="project-badge"><i class='bx bx-car'></i> Enterprise</div>
                 <div class="project-info">
                     <h4>Fleet Management System</h4>
-                    <span class="project-tech">JavaScript / Logistics</span>
-                    <p>Vehicle fleet management, vehicle maintenance, and route management.</p>
+                    <span class="project-tech">JavaScript / Enterprise UI</span>
+                    <p>Vehicle tracking, driver management, route optimization, and operational analytics dashboard.</p>
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/AHADKHATTAK1/fleet-management" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
                 </div>
             </div>
-            <div class="project-box">
-                <div class="project-info">
-                    <h4>AI Assistant</h4>
-                    <span class="project-tech">JavaScript / Web APIs</span>
-                    <p>Intelligent web-based AI assistant with conversational interface.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/AHADKHATTAK1/ai-assistant" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
-                </div>
-            </div>
-            <div class="project-box">
-                <div class="project-info">
-                    <h4>E-Commerce Platform</h4>
-                    <span class="project-tech">Shopify / HTML / Shell</span>
-                    <p>Modern e-commerce platform and online store architecture.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/AHADKHATTAK1/ecom-platform" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
-                </div>
-            </div>
-            <div class="project-box">
-                <div class="project-info">
-                    <h4>Blockchain Engine</h4>
-                    <span class="project-tech">Rust / Cryptography</span>
-                    <p>Custom decentralized blockchain engine implemented in Rust.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/AHADKHATTAK1/blockchain" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
-                </div>
-            </div>
-            <div class="project-box">
-                <div class="project-info">
-                    <h4>100 Days of TypeScript</h4>
-                    <span class="project-tech">TypeScript / Node.js</span>
-                    <p>100 days coding challenge mastering TypeScript and algorithms.</p>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/AHADKHATTAK1/100-DAYS-typescrpt" target="_blank" class="btn-visit"><i class='bx bxl-github'></i> View on GitHub</a>
-                </div>
-            </div>
         </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="https://github.com/AHADKHATTAK1?tab=repositories" target="_blank" class="btn"><i class='bx bxl-github'></i> View All Repositories on GitHub</a>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="https://github.com/AHADKHATTAK1?tab=repositories" target="_blank" class="btn btn-primary"><i class='bx bxl-github'></i> View All 35+ Repositories on GitHub</a>
         </div>
     </section>
 
+    <!-- Client Reviews / Customer Showcase Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="heading">Client <span>Feedback</span></h2>
+        <p class="section-subtitle">What clients say about my Shopify & Web Development work</p>
+        
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                </div>
+                <p class="review-text">"Muhammad Ahad transformed our online store with custom Shopify liquid themes. His attention to detail, speed, and design aesthetics are top notch!"</p>
+                <div class="client-info">
+                    <h4>E-Commerce Store Owner</h4>
+                    <span>Shopify Redesign Project</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                </div>
+                <p class="review-text">"The Fitness & Gym Management offline web app built by Ahad exceeded our expectations. Extremely fast, reliable, and user friendly!"</p>
+                <div class="client-info">
+                    <h4>Gym & Fitness Director</h4>
+                    <span>Gym Management System</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                </div>
+                <p class="review-text">"Working with Ahad on our logistics portal was seamless. He blends AI automation with robust web design perfectly."</p>
+                <div class="client-info">
+                    <h4>Logistics Manager</h4>
+                    <span>Javed Goods Logistics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? Send a message below!</p>
+        
         <form action="https://api.web3forms.com/submit" method="POST">
             <div class="input-box">
                 <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <input type="hidden" name="access_key" value="ec3177b1-3a6c-4d7e-9b32-5d4ea37aeab4">
 
@@ -267,20 +279,20 @@
                 <input type="tel" name="phone" placeholder="Phone Number" required>
                 <input type="text" name="subject" placeholder="Subject" required>
             </div>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="message" placeholder="Your Message..." required></textarea>
+            <button type="submit" class="btn btn-primary"><i class='bx bx-send'></i> Send Message</button>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="social">
-            <a href="https://www.linkedin.com/in/muhammad-ahad-khan-khattak-358361247" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-            <a href="https://github.com/AHADKHATTAK1" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-ahad-khan-khattak-358361247" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/AHADKHATTAK1" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
         </div>
-        <p>&copy; 2026 Muhammad Ahad Khan Khattak | All Rights Reserved</p>
+        <p>&copy; 2023 - 2026 Muhammad Ahad Khan Khattak | All Rights Reserved</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
