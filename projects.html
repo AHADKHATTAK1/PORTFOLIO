@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio & Projects Showcase by Muhammad Ahad Khan Khattak - Live Demos & GitHub Repositories">
+    <title>Projects Showcase | MUHAMMAD AHAD KHAN KHATTAK</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Boxicons CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Ambient Glow Orbs -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span class="logo-accent">&lt;/&gt;</span> AHAD<span class="logo-highlight">KHATTAK</span>
+        </a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="page-banner">
+        <span class="section-tag center"><i class='bx bx-briefcase'></i> LIVE SHOWCASE</span>
+        <h1 class="heading">Featured <span>Projects & Code</span></h1>
+        <p class="section-subtitle">Real-world customer applications, e-commerce portals, and AI implementations built since 2023.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-page">
+        <!-- Category Filters -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web & Live Apps</button>
+            <button class="filter-btn" data-filter="ai">AI & Systems</button>
+            <button class="filter-btn" data-filter="commercial">Commercial & POS</button>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1: ETP Portal -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-star'></i> Web Application</span>
+                    <div class="project-icon-top"><i class='bx bx-laptop'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>ETP Portal</h4>
+                    <span class="project-subtext">Web App / Vercel Deployment</span>
+                    <p>Enterprise Training & Educational Portal built for interactive learning, course delivery, and user management.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://etp-xi.vercel.app" target="_blank" class="btn-project primary"><i class='bx bx-link-external'></i> Live Demo</a>
+                    <a href="https://github.com/AHADKHATTAK1/etp" target="_blank" class="btn-project secondary"><i class='bx bxl-github'></i> Code</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Fitness & Gym Management -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-check-shield'></i> Customer Work</span>
+                    <div class="project-icon-top"><i class='bx bx-dumbbell'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>Fitness & Gym Management</h4>
+                    <span class="project-subtext">Full-Stack / Offline Support</span>
+                    <p>Comprehensive fitness management solution with offline data sync, member tracking, and revenue reports.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://gym-offline.vercel.app" target="_blank" class="btn-project primary"><i class='bx bx-link-external'></i> Live Demo</a>
+                    <a href="https://github.com/AHADKHATTAK1/gym-offline" target="_blank" class="btn-project secondary"><i class='bx bxl-github'></i> Code</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Masjid Website -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-heart'></i> Community</span>
+                    <div class="project-icon-top"><i class='bx bx-building-house'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>Masjid Website (Haji Barkat)</h4>
+                    <span class="project-subtext">HTML5 / CSS3 / JavaScript</span>
+                    <p>Official community portal for Masjid and Haji Barkat welfare initiatives, prayer schedules, and updates.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/AHADKHATTAK1/masjid-website" target="_blank" class="btn-project primary"><i class='bx bxl-github'></i> GitHub Repo</a>
+                </div>
+            </div>
+
+            <!-- Project 4: Javed Goods Logistics -->
+            <div class="project-card" data-category="commercial">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-truck'></i> Logistics</span>
+                    <div class="project-icon-top"><i class='bx bx-map-alt'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>Javed Goods Logistics</h4>
+                    <span class="project-subtext">Web App / Vercel</span>
+                    <p>Transport logistics and fleet tracking web portal built for seamless goods movement management.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://javed-goods.vercel.app" target="_blank" class="btn-project primary"><i class='bx bx-link-external'></i> Live Demo</a>
+                    <a href="https://github.com/AHADKHATTAK1/javed-goods" target="_blank" class="btn-project secondary"><i class='bx bxl-github'></i> Code</a>
+                </div>
+            </div>
+
+            <!-- Project 5: POS System -->
+            <div class="project-card" data-category="commercial">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-store-alt'></i> Commercial</span>
+                    <div class="project-icon-top"><i class='bx bx-receipt'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>POS System (Point of Sale)</h4>
+                    <span class="project-subtext">Web App / Vercel</span>
+                    <p>Retail Point of Sale software for real-time inventory management, sales reports, and receipt billing.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://pos2-mu.vercel.app" target="_blank" class="btn-project primary"><i class='bx bx-link-external'></i> Live Demo</a>
+                    <a href="https://github.com/AHADKHATTAK1/pos2" target="_blank" class="btn-project secondary"><i class='bx bxl-github'></i> Code</a>
+                </div>
+            </div>
+
+            <!-- Project 6: CardInfo Web App -->
+            <div class="project-card" data-category="web">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-credit-card'></i> Web App</span>
+                    <div class="project-icon-top"><i class='bx bx-wallet'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>CardInfo Web App</h4>
+                    <span class="project-subtext">JavaScript / HTML / Vercel</span>
+                    <p>Modern card detail verification and interactive financial information interface.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://cardinfo-phi.vercel.app" target="_blank" class="btn-project primary"><i class='bx bx-link-external'></i> Live Demo</a>
+                    <a href="https://github.com/AHADKHATTAK1/cardinfo" target="_blank" class="btn-project secondary"><i class='bx bxl-github'></i> Code</a>
+                </div>
+            </div>
+
+            <!-- Project 7: Trading AI Bot -->
+            <div class="project-card" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-bot'></i> AI Engine</span>
+                    <div class="project-icon-top"><i class='bx bx-line-chart'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>Trading AI Bot</h4>
+                    <span class="project-subtext">Python / Predictive AI</span>
+                    <p>Automated market analysis trading bot incorporating predictive AI models and real-time execution.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/AHADKHATTAK1/trading-ai-bot" target="_blank" class="btn-project primary"><i class='bx bxl-github'></i> GitHub Repo</a>
+                </div>
+            </div>
+
+            <!-- Project 8: Blockchain Engine -->
+            <div class="project-card" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-cube'></i> Systems</span>
+                    <div class="project-icon-top"><i class='bx bx-shield-alt-2'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>Rust Blockchain Engine</h4>
+                    <span class="project-subtext">Rust / Cryptography</span>
+                    <p>Custom decentralized blockchain engine implemented in Rust with cryptographic hashing.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/AHADKHATTAK1/blockchain" target="_blank" class="btn-project primary"><i class='bx bxl-github'></i> GitHub Repo</a>
+                </div>
+            </div>
+
+            <!-- Project 9: AI Assistant -->
+            <div class="project-card" data-category="ai">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-message-square-dots'></i> AI Web</span>
+                    <div class="project-icon-top"><i class='bx bx-bot'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>AI Assistant App</h4>
+                    <span class="project-subtext">JavaScript / Web APIs</span>
+                    <p>Intelligent web-based AI assistant with conversational interface and prompt processing.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/AHADKHATTAK1/ai-assistant" target="_blank" class="btn-project primary"><i class='bx bxl-github'></i> GitHub Repo</a>
+                </div>
+            </div>
+
+            <!-- Project 10: E-Commerce Platform -->
+            <div class="project-card" data-category="commercial">
+                <div class="project-card-header">
+                    <span class="project-badge"><i class='bx bx-shopping-bag'></i> E-Commerce</span>
+                    <div class="project-icon-top"><i class='bx bxl-shopify'></i></div>
+                </div>
+                <div class="project-body">
+                    <h4>Full E-Commerce Platform</h4>
+                    <span class="project-subtext">Shopify / Liquid / HTML</span>
+                    <p>Custom e-commerce store architecture and theme code built for online retail scaling.</p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/AHADKHATTAK1/ecom-platform" target="_blank" class="btn-project primary"><i class='bx bxl-github'></i> GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-cta">
+            <a href="https://github.com/AHADKHATTAK1?tab=repositories" target="_blank" class="btn btn-glow"><i class='bx bxl-github'></i> Explore 35+ Repositories on GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-accent">&lt;/&gt;</span> AHAD<span class="logo-highlight">KHATTAK</span>
+                <p>Crafting high-performance digital platforms, e-commerce stores, and AI solutions.</p>
+            </div>
+            <div class="social-footer">
+                <a href="https://www.linkedin.com/in/muhammad-ahad-khan-khattak-358361247" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/AHADKHATTAK1" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 - 2026 Muhammad Ahad Khan Khattak | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
