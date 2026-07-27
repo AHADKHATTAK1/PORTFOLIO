@@ -1,5 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Smooth Scroll for Navigation Links
+    // 1. Theme Toggle System (Dark / Light Mode)
+    const themeBtn = document.createElement('button');
+    themeBtn.className = 'theme-toggle-btn';
+    themeBtn.setAttribute('title', 'Toggle Theme');
+    themeBtn.innerHTML = '<i class="bx bx-sun"></i>';
+    document.body.appendChild(themeBtn);
+
+    const savedTheme = localStorage.getItem('ahad_theme') || 'dark';
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeBtn.innerHTML = '<i class="bx bx-moon"></i>';
+    }
+
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        localStorage.setItem('ahad_theme', isLight ? 'light' : 'dark');
+        themeBtn.innerHTML = isLight ? '<i class="bx bx-moon"></i>' : '<i class="bx bx-sun"></i>';
+    });
+
+    // 2. Smooth Scroll for Navigation Links
     document.querySelectorAll('.navbar a[href^="#"], .footer a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -11,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile nav menu
                     const navbar = document.querySelector('.navbar');
                     const menuIcon = document.getElementById('menu-icon');
                     if (navbar && navbar.classList.contains('active')) {
@@ -23,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Mobile Menu Toggle
+    // 3. Mobile Menu Toggle
     const menuIcon = document.getElementById('menu-icon');
     const navbar = document.querySelector('.navbar');
     if (menuIcon && navbar) {
@@ -33,28 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Scroll Active Section Highlight
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.navbar a');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 180;
-            if (window.pageYOffset >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(a => {
-            a.classList.remove('active');
-            if (a.getAttribute('href') === `#${current}`) {
-                a.classList.add('active');
-            }
-        });
-    });
-
-    // Dynamic Typing Effect
+    // 4. Dynamic Typing Effect
     const typingSpan = document.querySelector('.typing-text');
     if (typingSpan) {
         const words = [
@@ -82,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let typeSpeed = isDeleting ? 40 : 70;
 
             if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2200; // Pause at end
+                typeSpeed = 2200;
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
@@ -96,31 +94,61 @@ document.addEventListener("DOMContentLoaded", () => {
         typeEffect();
     }
 
-    // Interactive Project Filtering
+    // 5. Interactive Project Filtering & Real-Time Search
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const searchInput = document.getElementById('projectSearch');
+
+    function filterProjects() {
+        const activeFilter = document.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+        const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const title = card.querySelector('h4')?.textContent.toLowerCase() || '';
+            const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+            const tech = card.querySelector('.project-subtext')?.textContent.toLowerCase() || '';
+
+            const matchesCategory = (activeFilter === 'all' || category === activeFilter);
+            const matchesSearch = (!searchQuery || title.includes(searchQuery) || desc.includes(searchQuery) || tech.includes(searchQuery));
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'flex';
+                card.style.animation = 'fadeIn 0.4s ease forwards';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            projectCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                if (filterValue === 'all' || cardCategory === filterValue) {
-                    card.style.display = 'flex';
-                    card.style.animation = 'fadeIn 0.5s ease forwards';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            filterProjects();
         });
     });
 
-    // Scroll to Top Button
+    if (searchInput) {
+        searchInput.addEventListener('input', filterProjects);
+    }
+
+    // 6. Interactive FAQ Accordion
+    const faqCards = document.querySelectorAll('.faq-card');
+    faqCards.forEach(card => {
+        const question = card.querySelector('h3');
+        if (question) {
+            question.style.cursor = 'pointer';
+            question.addEventListener('click', () => {
+                faqCards.forEach(c => {
+                    if (c !== card) c.classList.remove('open');
+                });
+                card.classList.toggle('open');
+            });
+        }
+    });
+
+    // 7. Scroll to Top Button
     const scrollToTopBtn = document.createElement('button');
     scrollToTopBtn.innerHTML = '<i class="bx bx-up-arrow-alt"></i>';
     scrollToTopBtn.className = 'scroll-to-top';
